@@ -30,7 +30,7 @@ export default async function(data,req){
     <body style="font-family: sans-serif">
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
         <div><img src={data.image} width={width} height={width/4*3} id="image" /></div>
-        <div style="position: fixed;top:0;left:0">
+        <div style="position: fixed;top:0;left:0" width={width} height={width/4*3}>
           <span style="font-size: 24px">{data.title}</span>
           <span style="">
             <span style="">By</span>
