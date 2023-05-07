@@ -7,7 +7,11 @@ export default async function(data){
       <meta charset="utf-8" />
     </head>
     <body>
-      <p>Test</p>
+      <div style="display: flex; flex-wrap: wrap;">
+        <a href={ "https://scratch.mit.edu/projects/"+data.id }>
+          Link
+        </a>
+      </div>
     </body>
   </html>
   const html = await renderToString(jsx)
