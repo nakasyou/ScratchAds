@@ -7,9 +7,11 @@ export default async function(data){
       <meta charset="utf-8" />
       <title>{data.title} - Ads by Scratch Ads</title>
       <style>
-        * {
-          font-color: #fff;
-        }
+        {`
+          * {
+            font-color: #fff;
+          }
+        `}
       </style>
     </head>
     <body>
