@@ -8,9 +8,7 @@ export default async function(data){
     </head>
     <body>
       <div style="display: flex; flex-wrap: wrap;">
-        {/*<a href={ "https://scratch.mit.edu/projects/"+data.id }>
-          Link
-</a>*/}
+        { JSON.stringify(data) }
       </div>
     </body>
   </html>
