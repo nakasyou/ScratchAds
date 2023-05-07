@@ -1,7 +1,7 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { Fragment, h, renderToString } from "jsx";
-export default function(data){
+export default async function(data){
   const jsx = <html>
     <head>
       <meta charset="utf-8" />
@@ -10,6 +10,6 @@ export default function(data){
       <p>Test</p>
     </body>
   </html>
-  const html = renderToString(jsx)
+  const html = await renderToString(jsx)
   return "<!doctype HTML> " + html
 }
