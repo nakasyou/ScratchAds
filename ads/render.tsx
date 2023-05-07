@@ -31,6 +31,7 @@ export default async function(data,req){
           }
           #title{
             font-size: ${req.query("s")? req.query("s")*1.5+"px" : "1em"};
+            padding-right: 3px;
           }
         `}
       </style>
