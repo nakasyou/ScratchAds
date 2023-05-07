@@ -9,10 +9,13 @@ export default async function(data){
     </head>
     <body>
       <a href={"https://scratch.mit.edu/projects/"+data.id}>
+        <div><img src={data.image}/></div>
         <div style="display: flex; flex-wrap: wrap;">
-          <div><img src={data.image}/></div>
           <div style="font-size: 1.4em">{data.title}</div>
-          <div style=""><a href={"https://scratch.mit.edu/users/"+data.username}>@{data.username}</a></div>
+          <div style="">
+            <span>By</span>
+            <a href={"https://scratch.mit.edu/users/"+data.username}>@{data.username}</a>
+          </div>
         </div>
       </a>
     </body>
