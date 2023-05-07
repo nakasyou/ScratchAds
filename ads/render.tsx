@@ -21,7 +21,8 @@ export default async function(data,req){
             line-height: 1.1;
           }
           .image{
-            width: ${width}
+            width: ${width};
+            height: ${width/480*360};
           }
         `}
       </style>
