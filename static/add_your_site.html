@@ -37,6 +37,17 @@
   
   const make = () => {
     $result.src = `https://scratchads.deno.dev/ad/${$type.value}?w=${$width.value}`
+    
+    $result.width = $width.value
+    
+
+    switch($type.value){
+      case "4-3":
+        $result.height = $width.value*2/3
+        break;
+      default:
+        break;
+    }
     $resultCode.textContent = $result.outerHTML
   }
   
