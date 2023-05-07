@@ -10,7 +10,8 @@ export default async function(data){
     <body>
       <div style="display: flex; flex-wrap: wrap;">
         <a href={"https://scratch.mit.edu/projects/"+data.id}>
-          <img src={data.image}/>
+          <div><img src={data.image}/></div>
+          <div>{data.title}</div>
         </a>
       </div>
     </body>
