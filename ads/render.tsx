@@ -28,12 +28,12 @@ export default async function(data,req){
     <body style="font-family: sans-serif">
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
         <div><img src={data.image} width="480" height="330"/></div>
-        <div style="display: flex;">
-          <div style="font-size: 24px">{data.title}</div>
-          <div style="">
+        <div style="position: fixed;top:0;left:0">
+          <span style="font-size: 24px">{data.title}</span>
+          <span style="">
             <span style="">By</span>
             <a href={"https://scratch.mit.edu/users/"+data.username}>@{data.username}</a>
-          </div>
+          </span>
         </div>
       </a>
     </body>
