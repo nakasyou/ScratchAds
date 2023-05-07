@@ -1,6 +1,6 @@
 import { Hono } from "hono"
 import { serve } from "std-serve"
-import ads from "./ads/add.ts"
+import ads from "./ads/index.ts"
 
 const app = new Hono()
 
