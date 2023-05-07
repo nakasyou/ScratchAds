@@ -18,6 +18,8 @@ export default async function(data,req){
           body{
             transform: scale(${width/480}, ${width/480});
             transform-origin: top left;
+            padding: 0px;
+            margin: 0px;
           }
         `}
       </style>
