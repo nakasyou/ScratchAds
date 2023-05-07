@@ -2,7 +2,8 @@
 /** @jsxFrag Fragment */
 import { Fragment, h, renderToString } from "jsx";
 export default async function(data,req){
-  const width = req.query("w") ? req.query("w") : 480
+  //const width = req.query("w") ? req.query("w") : 480
+  const width=50
   const jsx = <html>
     <head>
       <meta charset="utf-8" />
@@ -13,7 +14,7 @@ export default async function(data,req){
           * {
             color: #000;
             font-family: 'Roboto', 'Noto Sans JP', sans-serif;
-            transform: scale(${width/480}, ${width/480})
+            transform: scale(${width/480}, ${width/480});
           }
         `}
       </style>
