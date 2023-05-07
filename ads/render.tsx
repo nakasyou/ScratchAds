@@ -2,8 +2,8 @@
 /** @jsxFrag Fragment */
 import { Fragment, h, renderToString } from "jsx";
 export default async function(data,req){
-  //const width = req.query("w") ? req.query("w") : 480
-  const width=50
+  const width = req.query("w") ? req.query("w") : 480
+  //const width=50
   const jsx = <html>
     <head>
       <meta charset="utf-8" />
