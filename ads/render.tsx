@@ -18,7 +18,7 @@ export default async function(data){
         `}
       </style>
     </head>
-    <body>
+    <body style="font-family: sans-serif">
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
         <div><img src={data.image}/></div>
         <div style="display: flex; flex-wrap: wrap;">
