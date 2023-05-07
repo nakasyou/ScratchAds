@@ -6,6 +6,11 @@ export default async function(data){
     <head>
       <meta charset="utf-8" />
       <title>{data.title} - Ads by Scratch Ads</title>
+      <style>
+        * {
+          font-color: #fff;
+        }
+      </style>
     </head>
     <body>
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
@@ -13,7 +18,7 @@ export default async function(data){
         <div style="display: flex; flex-wrap: wrap;">
           <div style="font-size: 1.4em">{data.title}</div>
           <div style="">
-            <span style="font-color: #000;">By</span>
+            <span style="">By</span>
             <a href={"https://scratch.mit.edu/users/"+data.username}>@{data.username}</a>
           </div>
         </div>
