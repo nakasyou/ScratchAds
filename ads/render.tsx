@@ -16,18 +16,19 @@ export default async function(data,req){
             font-family: 'Roboto', 'Noto Sans JP', sans-serif;
           }
           body{
-            transform: scale(${width/480}, ${width/480});
-            transform-origin: top left;
             padding: 0px;
             margin: 0px;
             line-height: 1.1;
+          }
+          .image{
+            width: ${width}
           }
         `}
       </style>
     </head>
     <body style="font-family: sans-serif">
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
-        <div><img src={data.image} width="480" height="330"/></div>
+        <div><img src={data.image} width="480" height="360" class="image" /></div>
         <div style="position: fixed;top:0;left:0">
           <span style="font-size: 24px">{data.title}</span>
           <span style="">
