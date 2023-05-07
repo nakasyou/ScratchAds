@@ -8,13 +8,13 @@ export default async function(data){
       <title>{data.title} - Ads by Scratch Ads</title>
     </head>
     <body>
-      <div style="display: flex; flex-wrap: wrap;">
-        <a href={"https://scratch.mit.edu/projects/"+data.id}>
+      <a href={"https://scratch.mit.edu/projects/"+data.id}>
+        <div style="display: flex; flex-wrap: wrap;">
           <div><img src={data.image}/></div>
           <div style="font-size: 1.4em">{data.title}</div>
           <div style=""><a href={"https://scratch.mit.edu/users/"+data.username}>@{data.username}</a></div>
-        </a>
-      </div>
+        </div>
+      </a>
     </body>
   </html>
   const html = await renderToString(jsx)
