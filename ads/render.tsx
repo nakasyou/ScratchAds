@@ -26,7 +26,7 @@ export default async function(data,req){
     </head>
     <body style="font-family: sans-serif">
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
-        <div><img src={data.image} width="480" height="336"/></div>
+        <div><img src={data.image} width="480" height="100"/></div>
         <div style="display: flex; flex-wrap: wrap;">
           <div style="font-size: 24px">{data.title}</div>
           <div style="">
