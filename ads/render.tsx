@@ -20,7 +20,7 @@ export default async function(data,req){
             margin: 0px;
             line-height: 1.1;
           }
-          .image{
+          #image{
             width: ${width};
             height: ${width/480*360};
           }
@@ -29,7 +29,7 @@ export default async function(data,req){
     </head>
     <body style="font-family: sans-serif">
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
-        <div><img src={data.image} width="480" height="360" class="image" /></div>
+        <div><img src={data.image} width="480" height="360" id="image" /></div>
         <div style="position: fixed;top:0;left:0">
           <span style="font-size: 24px">{data.title}</span>
           <span style="">
