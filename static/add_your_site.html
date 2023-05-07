@@ -24,7 +24,9 @@
       <div id="result">
         <iframe style="overflow:hidden;border:1px solid #000" scrolling="no">ScratchAds loading...</iframe>
       </div>
-      <pre style="width:100%;overflow-x:scroll;padding:5px;"><code id="result-code" style="background-color:#ddd;"></code></pre>
+      <h3>以下のコードを、自分のサイトに貼り付けてください。</h3>
+      <pre style="width:100%;overflow-x:scroll;padding:10px;"><code id="result-code" style="background-color:#ddd;"></code></pre>
+      <button id="copy">コピーする</button>
     </div>
   </body>
 </html>
@@ -34,6 +36,12 @@
   const $width = document.getElementById("width")
   const $type = document.getElementById("type")
   const $resultCode = document.getElementById("result-code")
+  const $copy = document.getElementById("copy")
+  
+  $copy.onClick = async () => {
+    await navigator.clipboard.writeText($result.outerHTML)
+    alert("Copyed!")
+  }
   
   const make = () => {
     $result.src = `https://scratchads.deno.dev/ad/${$type.value}?w=${$width.value}`
