@@ -28,8 +28,10 @@
   const $widthRange = document.getElementById("width-range")
   const $width = document.getElementById("width")
   
-  $widthRange.addEventListener("change", ev => {
+  $widthRange.addEventListener("input", ev => {
     $width.value = ev.target.value
   })
-  
+  $width.addEventListener("input", ev => {
+    $widthRange.value = ev.target.value
+  })
 </script>
