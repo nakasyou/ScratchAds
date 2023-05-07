@@ -1,5 +1,5 @@
 import { Hono } from "hono"
-import { Hono } from "hono/middleware"
+import { serveStatic } from "hono/middleware"
 import { serve } from "std-serve"
 import ads from "./ads/index.ts"
 
