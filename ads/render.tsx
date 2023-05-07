@@ -27,6 +27,7 @@ export default async function(data,req){
           #seq{
             width: ${width}px;
             height: ${width/480*360}px;
+            font-size: ${req.query("s")? req.query("s")+"px" : "1em"};
           }
         `}
       </style>
