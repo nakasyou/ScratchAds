@@ -20,14 +20,15 @@ export default async function(data,req){
             transform-origin: top left;
             padding: 0px;
             margin: 0px;
+            line-height: 1.1;
           }
         `}
       </style>
     </head>
     <body style="font-family: sans-serif">
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
-        <div><img src={data.image} width="480" height="100"/></div>
-        <div style="display: flex; flex-wrap: wrap;">
+        <div><img src={data.image} width="480" height="330"/></div>
+        <div style="display: flex;">
           <div style="font-size: 24px">{data.title}</div>
           <div style="">
             <span style="">By</span>
