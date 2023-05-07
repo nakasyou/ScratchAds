@@ -12,14 +12,24 @@
     <div>
       <div>
         <label for="type">種類を選択</label>
-        <select id="type">
-          <option>3:2</option>
+        <select id="type" class="input">
+          <option value="3-2">3:2 Scratchサイズ</option>
         </select>
       </div>
       <div>
         <label for="width">大きさを選択</label>
-        <input id="width">
+        <input id="width" type="number" class="input">
+        <input type="range" class="input" min="0" max="1000" id="width-range">
       </div>
     </div>
   </body>
 </html>
+<script>
+  const $widthRange = document.getElementById("width-range")
+  const $width = document.getElementById("width")
+  
+  $widthRange.addEventListener("change", ev => {
+    $width.value = ev.target.value
+  })
+  
+</script>
