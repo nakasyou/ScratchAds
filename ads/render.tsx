@@ -15,7 +15,10 @@ export default async function(data,req){
             color: #000;
             font-family: 'Roboto', 'Noto Sans JP', sans-serif;
           }
-          body{transform: scale(${width/480}, ${width/480});}
+          body{
+            transform: scale(${width/480}, ${width/480});
+            transform-origin: top left;
+          }
         `}
       </style>
     </head>
