@@ -36,13 +36,13 @@ export default async function(data,req){
       </style>
     </head>
     <body style="font-family: sans-serif">
-      <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
+      <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;" target="_top">
         <div><img src={data.image} width={width} height={width/4*3} id="image" /></div>
         <div id="seq" style="position:fixed;top:0;left:0;overflow-wrap:break-word;overflow:hidden;" width={width} height={width/4*3}>
           <span id="title">{data.title}</span>
           <span style="">
             <span style="">By</span>
-            <a href={"https://scratch.mit.edu/users/"+data.username}>@{data.username}</a>
+            <a href={"https://scratch.mit.edu/users/"+data.username} target="_top">@{data.username}</a>
           </span>
         </div>
       </a>
