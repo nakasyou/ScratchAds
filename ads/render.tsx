@@ -9,7 +9,7 @@ export default async function(data){
       <style>
         {`
           * {
-            font-color: #fff;
+            color: #000;
           }
         `}
       </style>
