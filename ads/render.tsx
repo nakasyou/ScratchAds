@@ -21,8 +21,12 @@ export default async function(data,req){
             line-height: 1.1;
           }
           #image{
+            width: ${width}px;
+            height: ${width/480*360}px;
+          }
+          #seq{
             width: ${width};
-            height: ${width/480*360};
+            height: ${width/480*360}px;
           }
         `}
       </style>
@@ -30,7 +34,7 @@ export default async function(data,req){
     <body style="font-family: sans-serif">
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
         <div><img src={data.image} width={width} height={width/4*3} id="image" /></div>
-        <div style="position: fixed;top:0;left:0;overflow-wrap:break-word;overflow:hidden" width={width} height={width/4*3}>
+        <div id="seq" style="position:fixed;top:0;left:0;overflow-wrap:break-word;overflow:hidden;" width={width} height={width/4*3}>
           <span style="font-size: 24px">{data.title}</span>
           <span style="">
             <span style="">By</span>
