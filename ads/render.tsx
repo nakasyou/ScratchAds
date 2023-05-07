@@ -13,7 +13,7 @@ export default async function(data){
             color: #000;
           }
           body{
-            font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+            font-family: 'Roboto', 'Noto Sans JP', sans-serif;
           }
         `}
       </style>
