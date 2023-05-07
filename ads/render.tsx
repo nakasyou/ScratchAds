@@ -8,7 +8,7 @@ export default async function(data){
       <title>{data.title} - Ads by Scratch Ads</title>
     </head>
     <body>
-      <a href={"https://scratch.mit.edu/projects/"+data.id}>
+      <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
         <div><img src={data.image}/></div>
         <div style="display: flex; flex-wrap: wrap;">
           <div style="font-size: 1.4em">{data.title}</div>
