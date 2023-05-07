@@ -18,15 +18,25 @@
       </div>
       <div>
         <label for="width">大きさを選択</label>
-        <input id="width" type="number" class="input">
-        <input type="range" class="input" min="0" max="1000" id="width-range">
+        <input id="width" type="number" class="input" value="480">
+        <input type="range" class="input" min="0" max="1000" id="width-range" value="480">
+      </div>
+      <div id="result">
+        <iframe>ScratchAds loading...</iframe>
       </div>
     </div>
   </body>
 </html>
 <script>
+  const $result = document.querySelector("#result iframe")
   const $widthRange = document.getElementById("width-range")
   const $width = document.getElementById("width")
+  const $type = document.getElementById("type")
+  
+  const make = () => {
+    $result.src = `https://scratchads.deno.dev/ad/${$type.value}`
+  }
+  
   
   $widthRange.addEventListener("input", ev => {
     $width.value = ev.target.value
@@ -34,4 +44,10 @@
   $width.addEventListener("input", ev => {
     $widthRange.value = ev.target.value
   })
+  
+  for(const input of document.getElementsByClassName("input")){
+    input.addEventListener("change",make)
+  }
+  
+  make()
 </script>
