@@ -8,8 +8,12 @@ export default async function(data){
       <title>{data.title} - Ads by Scratch Ads</title>
       <style>
         {`
+          @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Roboto:wght@300&display=swap');
           * {
             color: #000;
+          }
+          body{
+            font-family: 'Noto Sans JP', 'Roboto', sans-serif;
           }
         `}
       </style>
