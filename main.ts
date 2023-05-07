@@ -4,5 +4,5 @@ import ads from "./ads/index.ts"
 
 const app = new Hono()
 
-app.get('/ad-480x360',ads)
+app.get('/ad/4-3',ads)
 serve(app.fetch)

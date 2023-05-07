@@ -12,5 +12,5 @@ const getAd = async (): ProjectData => {
 }
 export default async (c: Context) => {
   const ad = await getAd()
-  return c.html(await render(ad))
+  return c.html(await render(ad),c.req)
 }
