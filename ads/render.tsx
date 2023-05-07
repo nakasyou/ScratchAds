@@ -11,8 +11,6 @@ export default async function(data){
           @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Roboto:wght@300&display=swap');
           * {
             color: #000;
-          }
-          body{
             font-family: 'Roboto', 'Noto Sans JP', sans-serif;
           }
         `}
