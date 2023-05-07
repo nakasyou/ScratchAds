@@ -18,9 +18,9 @@ export default async function(data){
     </head>
     <body style="font-family: sans-serif">
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;">
-        <div><img src={data.image}/></div>
+        <div><img src={data.image} width="480" height="336"/></div>
         <div style="display: flex; flex-wrap: wrap;">
-          <div style="font-size: 1.4em">{data.title}</div>
+          <div style="font-size: 24px">{data.title}</div>
           <div style="">
             <span style="">By</span>
             <a href={"https://scratch.mit.edu/users/"+data.username}>@{data.username}</a>
