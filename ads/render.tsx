@@ -25,7 +25,7 @@ export default async function(data,req){
             height: ${width/480*360}px;
           }
           #seq{
-            width: ${width};
+            width: ${width}px;
             height: ${width/480*360}px;
           }
         `}
