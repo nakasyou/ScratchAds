@@ -8,9 +8,9 @@ export default async function(data){
     </head>
     <body>
       <div style="display: flex; flex-wrap: wrap;">
-        <a href={ "https://scratch.mit.edu/projects/"+data.id }>
+        {/*<a href={ "https://scratch.mit.edu/projects/"+data.id }>
           Link
-        </a>
+</a>*/}
       </div>
     </body>
   </html>
