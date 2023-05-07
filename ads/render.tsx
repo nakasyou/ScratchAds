@@ -13,7 +13,7 @@ export default async function(data){
         <div style="display: flex; flex-wrap: wrap;">
           <div style="font-size: 1.4em">{data.title}</div>
           <div style="">
-            <span>By</span>
+            <span style="font-color: #000;">By</span>
             <a href={"https://scratch.mit.edu/users/"+data.username}>@{data.username}</a>
           </div>
         </div>
