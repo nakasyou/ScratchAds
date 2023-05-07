@@ -38,10 +38,9 @@
   const $resultCode = document.getElementById("result-code")
   const $copy = document.getElementById("copy")
   
-  $copy.onClick = async () => {
-    await navigator.clipboard.writeText($result.outerHTML)
-    alert("Copyed!")
-  }
+  $copy.addEventListener("click",() => {
+    navigator.clipboard.writeText($result.outerHTML).then(()=>alert("Copyed!"))
+  })
   
   const make = () => {
     $result.src = `https://scratchads.deno.dev/ad/${$type.value}?w=${$width.value}`
