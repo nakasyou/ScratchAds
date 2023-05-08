@@ -8,8 +8,8 @@ const app = new Hono()
 
 const exists = async (filename: string): Promise<boolean> => {
   try {
-    await Deno.stat(filename);
-    return true;
+    const stat = await Deno.stat(filename);
+    return stat.isFile;
   } catch (error) {
     if (error instanceof Deno.errors.NotFound) {
       return false;
