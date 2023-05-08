@@ -25,10 +25,10 @@ app.use('/*', async (c, next) => {
   if(pathname.at(-1) !== "/")
     pathname += "/"
   let path = "./ejs"+pathname
-  if(exists(path))
+  if(await exists(path))
     return c.html(await dejs.renderFileToString(path))
   path = "./ejs"+pathname+"index.ejs"
-  if(exists(path))
+  if(await exists(path))
     return c.html(await dejs.renderFileToString(path))
 
   await next()
