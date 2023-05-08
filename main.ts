@@ -15,8 +15,8 @@ app.use('/*', (c, next) => {
     return dejs.renderFileToString("."+pathname)
   }catch try{
     return dejs.renderFileToString("."+pathname+"index.ejs")
-  }catch
-    next()
+  }catch{}
+  next()
 })
 app.use('/*',serveStatic({ root: "./static" }))
 
