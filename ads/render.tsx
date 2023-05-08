@@ -27,11 +27,13 @@ export default async function(data,req){
           #seq{
             width: ${width}px;
             font-size: ${req.query("s")? req.query("s")+"px" : "1em"};
-            background-color: #fff;
           }
           #title{
             font-size: ${req.query("s")? req.query("s")*1.5+"px" : "1em"};
             padding-right: 3px;
+          }
+          .back{
+            background-color: #fff;
           }
         `}
       </style>
@@ -40,8 +42,8 @@ export default async function(data,req){
       <a href={"https://scratch.mit.edu/projects/"+data.id} style="text-decoration: none;" target="_top">
         <div><img src={data.image} width={width} height={width/4*3} id="image" /></div>
         <div id="seq" style="position:absolute;top:0;left:0;overflow-wrap:break-word;overflow:hidden;" width={width}>
-          <span id="title">{data.title}</span>
-          <span style="">
+          <span id="title" class="back">{data.title}</span>
+          <span style="" class="back">
             <span style="">By</span>
             <a href={"https://scratch.mit.edu/users/"+data.username} target="_top">@{data.username}</a>
           </span>
