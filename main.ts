@@ -9,6 +9,7 @@ const app = new Hono()
 app.get('/ad/4-3',ads)
 app.use('/*', async (c, next) => {
   let pathname = new URL(c.req.url).pathname
+  return c.text(pathname)
   if(pathname.at(-1) !== "/")
     pathname += "/"
   try{
