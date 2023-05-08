@@ -13,7 +13,8 @@ app.use('/*', (c, next) => {
     pathname += "/"
   try{
     return dejs.renderFileToString("."+pathname)
-  }catch try{
+  }catch{}
+  try{
     return dejs.renderFileToString("."+pathname+"index.ejs")
   }catch{}
   next()
