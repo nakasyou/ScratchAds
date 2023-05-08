@@ -9,9 +9,9 @@ const app = new Hono()
 app.get('/ad/4-3',ads)
 app.use('/*', async (c, next) => {
   let pathname = new URL(c.req.url).pathname
-  return c.text(pathname)
   if(pathname.at(-1) !== "/")
     pathname += "/"
+  return pathname
   try{
     return c.html(await dejs.renderFileToString("./ejs"+pathname))
   }catch{}
