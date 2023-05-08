@@ -27,6 +27,7 @@ export default async function(data,req){
           #seq{
             width: ${width}px;
             font-size: ${req.query("s")? req.query("s")+"px" : "1em"};
+            background-color: #fff;
           }
           #title{
             font-size: ${req.query("s")? req.query("s")*1.5+"px" : "1em"};
