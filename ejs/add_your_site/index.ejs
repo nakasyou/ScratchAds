@@ -6,27 +6,29 @@
   </head>
   <body>
     <%- await include("./ejs/components/header.ejs") %>
-    <h1>ScratchAds</h1>
-    <h2>あなたのサイトに広告を掲載する</h2>
-    <p>ScratchAdsは、自分のサイトに広告を掲載したいという方々によって成り立っています。自分のサイトに載せる方法を解説します。</p>
-    <div>
+    <div class="mx-10">
+      <h1>ScratchAds</h1>
+      <h2>あなたのサイトに広告を掲載する</h2>
+      <p>ScratchAdsは、自分のサイトに広告を掲載したいという方々によって成り立っています。自分のサイトに載せる方法を解説します。</p>
       <div>
-        <label for="type">種類を選択</label>
-        <select id="type" class="input">
-          <option value="4-3">4:3 Scratchサイズ</option>
-        </select>
+        <div>
+          <label for="type">種類を選択</label>
+          <select id="type" class="input">
+            <option value="4-3">4:3 Scratchサイズ</option>
+          </select>
+        </div>
+        <div>
+          <label for="width">大きさを選択</label>
+          <input id="width" type="number" class="input" value="480">
+          <input type="range" class="input" min="0" max="1000" id="width-range" value="480">
+        </div>
+        <div id="result">
+          <iframe style="overflow:hidden;border:1px solid #000" scrolling="no">ScratchAds loading...</iframe>
+        </div>
+        <h3>以下のコードを、自分のサイトに貼り付けてください。</h3>
+        <pre style="width:100%;overflow-x:scroll;padding:10px;"><code id="result-code" style="background-color:#ddd;"></code></pre>
+        <button id="copy">コピーする</button>
       </div>
-      <div>
-        <label for="width">大きさを選択</label>
-        <input id="width" type="number" class="input" value="480">
-        <input type="range" class="input" min="0" max="1000" id="width-range" value="480">
-      </div>
-      <div id="result">
-        <iframe style="overflow:hidden;border:1px solid #000" scrolling="no">ScratchAds loading...</iframe>
-      </div>
-      <h3>以下のコードを、自分のサイトに貼り付けてください。</h3>
-      <pre style="width:100%;overflow-x:scroll;padding:10px;"><code id="result-code" style="background-color:#ddd;"></code></pre>
-      <button id="copy">コピーする</button>
     </div>
   </body>
 </html>
