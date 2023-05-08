@@ -11,7 +11,6 @@ app.use('/*', async (c, next) => {
   let pathname = new URL(c.req.url).pathname
   if(pathname.at(-1) !== "/")
     pathname += "/"
-  return c.text(pathname)
   try{
     return c.html(await dejs.renderFileToString("./ejs"+pathname))
   }catch{}
