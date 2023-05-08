@@ -7,15 +7,15 @@ import * as dejs from "dejs"
 const app = new Hono()
 
 app.get('/ad/4-3',ads)
-app.use('/*', (c, next) => {
+app.use('/*', async (c, next) => {
   let pathname = new URL(c.req.url).pathname
   if(pathname.at(-1) !== "/")
     pathname += "/"
   try{
-    return c.html(dejs.renderFileToString("."+pathname))
+    return c.html(await dejs.renderFileToString("./ejs"+pathname))
   }catch{}
   try{
-    return c.html(dejs.renderFileToString("."+pathname+"index.ejs"))
+    return c.html(await dejs.renderFileToString("./ejs"+pathname+"index.ejs"))
   }catch{}
   next()
 })
