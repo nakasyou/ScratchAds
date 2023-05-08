@@ -13,10 +13,16 @@ app.use('/*', async (c, next) => {
     pathname += "/"
   try{
     return c.html(await dejs.renderFileToString("./ejs"+pathname))
-  }catch{}
+  }catch(e){
+    if(!(e instanceof Deno.errors.NotFound))
+      throw e
+  }
   try{
     return c.html(await dejs.renderFileToString("./ejs"+pathname+"index.ejs"))
-  }catch{}
+  }catch(e){
+    if(!(e instanceof Deno.errors.NotFound))
+      throw e
+  }
   await next()
 })
 app.use('/*',serveStatic({ root: "./static" }))
