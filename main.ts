@@ -17,7 +17,7 @@ app.use('/*', async (c, next) => {
   try{
     return c.html(await dejs.renderFileToString("./ejs"+pathname+"index.ejs"))
   }catch{}
-  next()
+  await next()
 })
 app.use('/*',serveStatic({ root: "./static" }))
 
