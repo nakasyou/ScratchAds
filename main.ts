@@ -12,10 +12,10 @@ app.use('/*', (c, next) => {
   if(pathname.at(-1) !== "/")
     pathname += "/"
   try{
-    return dejs.renderFileToString("."+pathname)
+    return c.html(dejs.renderFileToString("."+pathname))
   }catch{}
   try{
-    return dejs.renderFileToString("."+pathname+"index.ejs")
+    return c.html(dejs.renderFileToString("."+pathname+"index.ejs"))
   }catch{}
   next()
 })
