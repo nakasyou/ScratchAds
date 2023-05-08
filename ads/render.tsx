@@ -45,7 +45,7 @@ export default async function(data,req){
           <span id="title" class="back">{data.title}</span>
           <span style="" class="back">
             <span style="">By</span>
-            <a href={"https://scratch.mit.edu/users/"+data.username} target="_top">@{data.username}</a>
+            <a href={"https://scratch.mit.edu/users/"+data.username} target="_top" class="back">@{data.username}</a>
           </span>
         </div>
       </a>
