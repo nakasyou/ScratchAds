@@ -3,6 +3,7 @@
     "hono": "https://deno.land/x/hono@v3.1.8/mod.ts",
     "hono/middleware": "https://deno.land/x/hono@v3.1.8/middleware.ts",
     "std-serve": "https://deno.land/std@0.186.0/http/server.ts",
-    "jsx": "https://deno.land/x/jsx@v0.1.5/mod.ts"
+    "jsx": "https://deno.land/x/jsx@v0.1.5/mod.ts",
+    "dejs": "https://deno.land/x/dejs@0.10.3/mod.ts"
   }
 }
