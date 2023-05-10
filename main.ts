@@ -20,6 +20,7 @@ const exists = async (filename: string): Promise<boolean> => {
 }
 
 app.get('/ad/4-3',ads)
+app.get('/transfer/:id',c => c.redirect(`https://scratch.mit.edu/projects/${c.req.params("id")}`))
 app.use('/*', async (c, next) => {
   let pathname = new URL(c.req.url).pathname
   if(pathname.at(-1) !== "/")
